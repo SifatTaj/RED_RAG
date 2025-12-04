@@ -63,15 +63,21 @@ print(res)
 Alternatively, the `config.yaml` file can be configured and launched using `red_rag.py`:
 
 ```yaml
+# Document Configuration
 doc_path: "example_doc/wixqa.txt"                         # path to the document in plain text
 chunk_size: 100                                           # size of each text chunk for embedding
 chunk_overlap: 20                                         # number of overlapping characters for each chunk
+
+# Vector Store Configuration
 embedding_model: "sentence-transformers/all-MiniLM-L6-v2" # name or path to the embedding model
 backend: "pytorch"                                        # choose between "pytorch" and "cuda" backend
 index_method: "FlatL2"                                    # supports "FlatL2" and "HNSW"
 deduplication_threshold: 0.9                              # similarity threshold for deduplication
 search_top_k: 10                                          # number of retrieved chunks
+
+# Hash Configuration
 n_bits: 4                                                 # number of bits for hashing
+
 ```
 
 ## CUDA Backend

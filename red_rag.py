@@ -6,7 +6,7 @@ from core.util import make_chunks, load_yaml
 
 def init_vector_store(config) -> VectorStore:
     chunks = make_chunks(config["doc_path"], chunk_size=config["chunk_size"], chunk_overlap=config["chunk_overlap"])
-    embedding_model = SentenceTransformer(config["embedding_model"], config["backend"])
+    embedding_model = SentenceTransformer(config["embedding_model"])
     vector_store = VectorStore(embedding_model, backend=config["backend"])
     vector_store.add_chunks(chunks)
     vector_store.generate_hash_buckets(config["n_bits"])
