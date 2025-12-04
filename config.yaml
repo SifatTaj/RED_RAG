@@ -1,0 +1,14 @@
+# Document Configuration
+doc_path: "example_doc/wixqa.txt"
+chunk_size: 100
+chunk_overlap: 20
+
+# Vector Store Configuration
+embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+backend: "cuda"
+index_method: "FlatL2"
+deduplication_threshold: 0.9
+search_top_k: 10
+
+# Hash Configuration
+n_bits: 4
