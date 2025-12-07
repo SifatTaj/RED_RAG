@@ -7,6 +7,8 @@ It uses random projection-based hashing to group similar embeddings and eliminat
 threshold using cosine similarity. RED_RAG is faster than SemHash and SemDeDup while achieving similar deduplication
 performance.
 
+![image](assets/RED_RAG.drawio.png)
+
 ### How RED_RAG works:
 1. It generates random `nbit` projections of the embedding dimension `dim`.
 2. Using the random projections, all nearby embeddings are grouped into sevaral buckets.
@@ -15,7 +17,7 @@ performance.
 5. From each group of semantic duplicates within a bucket, one embedding is kept and the rest are removed.
 
 ### RED_RAG currently supports two backends:
-1. **CUDA:** Written in native CUDA that leverages Nvidia CUDA Toolkits.
+1. **CUDA:** Written in native CUDA that leverages Nvidia CUDA Toolkits. Check the [CUDA Backend](#cuda-backend) section for more details.
 2. **Pytorch:** For running on CPUs and other Pytorch backends.
 ## Quickstart
 
