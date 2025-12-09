@@ -1,4 +1,4 @@
-<h2 align="center">
+<h2 align="center" style="font-family: 'Courier New'; font-size: 30px;">
   RED_RAG
 </h2>
 
