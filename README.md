@@ -15,6 +15,7 @@ performance.
 3. Within each bucket, pairwise cosine similarities are computed.
 4. Data pairs that have a cosine similarity above a certain threshold are considered semantic duplicates.
 5. From each group of semantic duplicates within a bucket, one embedding is kept and the rest are removed.
+6. After deduplication, each bucket is indexed.
 
 ### RED_RAG currently supports two backends:
 1. **CUDA:** Written in native CUDA that leverages Nvidia CUDA Toolkits. Check the [CUDA Backend](#cuda-backend) section for more details.
